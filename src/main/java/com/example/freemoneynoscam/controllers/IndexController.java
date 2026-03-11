@@ -6,12 +6,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class IndexController {
     @GetMapping("/")
-    public String index(){
-        return "index";
+    public ModelAndView index(){
+        return new ModelAndView("index");
     }
 
     @PostMapping("/test")
